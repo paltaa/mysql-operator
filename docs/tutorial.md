@@ -149,7 +149,7 @@ You can use a MySQL client container to verify that you can connect to MySQL
 from within the Kubernetes cluster.
 
 ```console
-$ kubectl run mysql-client --image=mysql:5.7 -it --rm --restart=Never \
+$ kubectl run mysql-client --image=mysql:5.7 -it --rm  -n my-namespace --restart=Never \
     -- mysql -h my-app-db -uroot -pETdmMKh2UuDq9m7y -e 'SELECT 1'
 Waiting for pod default/mysql-client to be running, status is Pending, pod ready: false
 mysql: [Warning] Using a password on the command line interface can be insecure.
